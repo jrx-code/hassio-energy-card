@@ -1,0 +1,86 @@
+type: custom:lumina-energy-card
+language: en
+background_image: /local/images/lumina_energy_transparent.png
+background_image_heat_pump: /local/images/lumina_background-hvac-transparent.png
+header_font_size: "22"
+animation_speed_factor: 0.5
+animation_style: dashes
+pv_primary_color: "#00f2ff"
+pv_tot_color: "#00f2ff"
+pv_secondary_color: "#0080ff"
+pv_string1_color: "#00c3ff"
+pv_string2_color: "#00c3ff"
+pv_string3_color: "#00c3ff"
+pv_string4_color: "#00c3ff"
+pv_string5_color: "#00c3ff"
+pv_string6_color: "#00c3ff"
+load_flow_color: "#00f2ff"
+load_text_color: "#ffffff"
+house_total_color: "#00f2ff"
+inv1_color: "#0080ff"
+inv2_color: "#0080ff"
+load_threshold_warning: 10
+load_warning_color: "#ff9900"
+load_threshold_critical: 15
+load_critical_color: "#ff3333"
+battery_soc_color: "#ffffff"
+battery_charge_color: "#00ffcc"
+battery_discharge_color: "#ffffff"
+battery_fill_high_color: "#00f2ff"
+battery_fill_low_color: "#ff3333"
+battery_fill_low_threshold: 20
+grid_import_color: "#ff3333"
+grid_export_color: "#00ffcc"
+grid_warning_color: "#ff9900"
+grid_critical_color: "#ff3333"
+car_flow_color: "#0080ff"
+car1_color: "#ffffff"
+car2_color: "#ffffff"
+car1_name_color: "#e0ffff"
+car2_name_color: "#e0ffff"
+car2_pct_color: "#00f2ff"
+heat_pump_flow_color: "#00c3ff"
+heat_pump_text_color: "#00c3ff"
+sensor_bat1_soc: sensor.battery_soc
+sensor_heat_pump_consumption: sensor.calkowity_pobor_energii_biura
+display_unit: kW
+update_interval: 30
+sensor_pv_total: sensor.pv_power
+sensor_daily: sensor.solar_energy_today
+sensor_home_load: sensor.60eh103047hm011_loads_power
+invert_battery: true
+sensor_grid_import_daily: sensor.grid_consumption_energy_today
+sensor_grid_export_daily: sensor.feed_in_energy_today
+sensor_pv1: sensor.pv_power
+sensor_bat1_power: sensor.invbatpower
+sensor_grid_import: sensor.60eh103047hm011_grid_consumption_power
+sensor_grid_export: sensor.60eh103047hm011_feedin_power
+show_grid_flow_label: false
+show_daily_grid: true
+show_car_soc: true
+car1_label: HVAC
+sensor_car_power: sensor.calkowity_pobor_energii_klimat_w_domu
+car2_label: BIURA
+sensor_car2_power: sensor.calkowity_pobor_energii_biura
+sensor_popup_pv_1_name: "Dzisiejsza produkcja: "
+sensor_popup_pv_1: sensor.energy_production_today
+sensor_popup_pv_2_name: "Jutrzejsza produkcja: "
+sensor_popup_pv_2: sensor.energy_production_tomorrow
+sensor_popup_pv_3_name: "Pozostało produkcji dzisiaj: "
+sensor_popup_pv_3: sensor.energy_production_today_remaining
+sensor_popup_bat_1: select.work_mode
+sensor_popup_bat_1_name: "Tryb pracy: "
+sensor_popup_bat_2: sensor.battery_charge_today
+sensor_popup_bat_2_name: "Ładowanie baterii dzisiaj: "
+sensor_popup_house_1: sensor.invtemp
+sensor_popup_house_1_name: Temperatura inwertera
+daily_label_font_size: "15"
+pv_font_size: "20"
+battery_power_font_size: "20"
+load_font_size: "22"
+heat_pump_font_size: "20"
+grid_font_size: "17"
+sensor_popup_pv_1_font_size: "17"
+sensor_popup_pv_2_font_size: "17"
+sensor_popup_pv_3_font_size: "17"
+

@@ -4,6 +4,10 @@ A highly customized configuration for the Home Assistant Energy Dashboard, based
 
 This repository contains a specialized setup featuring a **Neon/Cyberpunk** aesthetic, transparency support, and re-purposed entity slots for advanced home monitoring (HVAC, Offices).
 
+## 🎥 Preview
+
+![Energy Card Preview](images/preview.gif)
+
 ## ⚡ Features
 
 - **Neon/Cyberpunk Theme:** Custom color palette optimized for dark/AMOLED dashboards (Cyan `#00f2ff`, Deep Blue `#0080ff`).
@@ -14,12 +18,20 @@ This repository contains a specialized setup featuring a **Neon/Cyberpunk** aest
 - **Interactive Popups:** Detailed data on click (Tomorrow's forecast, Battery cycles, Inverter temps).
 - **Transparency:** Fully transparent backgrounds for seamless integration with dashboard wallpapers.
 
+## 🖼️ Included Assets
+
+This repository includes custom generated backgrounds located in the `images/` directory, optimized for this configuration:
+
+| File | Description |
+|------|-------------|
+| `lumina_background-hvac.png` | Standard background with HVAC visualization |
+| `lumina_background-hvac-transparent.png` | Transparent version for overlay use (Recommended) |
+| `lumina_background-car.png` | Alternative background with Car visualization |
+
 ## 🛠️ Installation
 
 1. Ensure you have the `lumina-energy-card` installed (via HACS or manual).
-2. Upload the required background images to your `/local/images/` directory:
-   - `lumina_energy_transparent.png`
-   - `lumina_background-hvac-transparent.png`
+2. Copy the contents of the `images/` folder to your Home Assistant `/local/images/` directory (or adjust paths in the config).
 3. Use the configuration below in your Lovelace dashboard.
 
 ## ⚙️ Configuration
