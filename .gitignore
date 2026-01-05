@@ -1,0 +1,17 @@
+# Home Assistant specific
+.storage/
+.cloud/
+.google.token
+ip_bans.yaml
+secrets.yaml
+home-assistant_v2.db
+home-assistant.log
+
+# System
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
