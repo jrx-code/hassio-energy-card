@@ -165,4 +165,4 @@ grid_font_size: "17"
 sensor_popup_pv_1_font_size: "17"
 sensor_popup_pv_2_font_size: "17"
 sensor_popup_pv_3_font_size: "17"
-
+```
