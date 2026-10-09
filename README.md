@@ -44,11 +44,14 @@ This configuration repurposes standard slots for specific use cases:
 | `car2` | **BIURA** | Office equipment consumption |
 
 ### YAML Code
+
+All `entity_id` values below are **placeholders** (e.g. `sensor.inverter_load_power`). Replace them with the entities from your own inverter / energy integrations before using the card.
+
 ```yaml
 type: custom:lumina-energy-card
 language: en
 # Visuals & Assets
-background_image: /local/images/lumina_energy_transparent.png
+background_image: /local/images/lumina_background-car.png
 background_image_heat_pump: /local/images/lumina_background-hvac-transparent.png
 header_font_size: "22"
 animation_speed_factor: 0.5
@@ -102,49 +105,49 @@ heat_pump_flow_color: "#00c3ff"
 heat_pump_text_color: "#00c3ff"
 
 # --- SENSORS & DATA ---
-sensor_pv_total: sensor.pv_power
-sensor_daily: sensor.solar_energy_today
-sensor_home_load: sensor.60eh103047hm011_loads_power
-sensor_grid_import_daily: sensor.grid_consumption_energy_today
-sensor_grid_export_daily: sensor.feed_in_energy_today
-sensor_grid_import: sensor.60eh103047hm011_grid_consumption_power
-sensor_grid_export: sensor.60eh103047hm011_feedin_power
+sensor_pv_total: sensor.inverter_pv_power
+sensor_daily: sensor.inverter_solar_energy_today
+sensor_home_load: sensor.inverter_load_power
+sensor_grid_import_daily: sensor.inverter_grid_import_energy_today
+sensor_grid_export_daily: sensor.inverter_grid_export_energy_today
+sensor_grid_import: sensor.inverter_grid_import_power
+sensor_grid_export: sensor.inverter_grid_export_power
 
 # Battery
-sensor_bat1_soc: sensor.battery_soc
-sensor_bat1_power: sensor.invbatpower
+sensor_bat1_soc: sensor.inverter_battery_soc
+sensor_bat1_power: sensor.inverter_battery_power
 invert_battery: true
 
 # Heat Pump (Main)
-sensor_heat_pump_consumption: sensor.calkowity_pobor_energii_biura # Check mapping
+sensor_heat_pump_consumption: sensor.heat_pump_power
 
 # Custom Consumers (Mapped as Cars)
 show_car_soc: true
 # HVAC
 car1_label: HVAC
-sensor_car_power: sensor.calkowity_pobor_energii_klimat_w_domu
+sensor_car_power: sensor.hvac_power
 # Office
 car2_label: BIURA
-sensor_car2_power: sensor.calkowity_pobor_energii_biura
+sensor_car2_power: sensor.office_power
 
 # --- POPUPS & EXTRAS ---
 # PV Details
 sensor_popup_pv_1_name: "Dzisiejsza produkcja: "
-sensor_popup_pv_1: sensor.energy_production_today
+sensor_popup_pv_1: sensor.solar_forecast_today
 sensor_popup_pv_2_name: "Jutrzejsza produkcja: "
-sensor_popup_pv_2: sensor.energy_production_tomorrow
+sensor_popup_pv_2: sensor.solar_forecast_tomorrow
 sensor_popup_pv_3_name: "Pozostało produkcji dzisiaj: "
-sensor_popup_pv_3: sensor.energy_production_today_remaining
+sensor_popup_pv_3: sensor.solar_forecast_today_remaining
 
 # Battery Details
 sensor_popup_bat_1_name: "Tryb pracy: "
-sensor_popup_bat_1: select.work_mode
+sensor_popup_bat_1: select.inverter_work_mode
 sensor_popup_bat_2_name: "Ładowanie baterii dzisiaj: "
-sensor_popup_bat_2: sensor.battery_charge_today
+sensor_popup_bat_2: sensor.inverter_battery_charge_today
 
 # Inverter Details
 sensor_popup_house_1_name: Temperatura inwertera
-sensor_popup_house_1: sensor.invtemp
+sensor_popup_house_1: sensor.inverter_temperature
 
 # UI Settings
 display_unit: kW
